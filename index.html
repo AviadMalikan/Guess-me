@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Guess-Me</title>
+  <link rel="stylesheet" href="css/app.css" />
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="img/layout/logo.png" />
+    <h1>Guess Who</h1>
+  </header>
+  <main class="my-20">
+
+    <section class="winner my-5">
+      <h1 class="display-3"></h1>
+    </section>
+
+    <section class="game-start my-3">
+      <h2 class="display-1">Think of Someone...</h2>
+      <button class="btn btn-start btn-warning my-3">I'm Ready!</button>
+    </section>
+
+
+    <section class="quest my-5" style="display: none">
+      <h2 class="display-3"></h2>
+      <button class="btn btn-success btn-yes my-4">Yes</button>
+      <button class="btn btn-danger btn-no">No</button>
+    </section>
+
+
+    <section class="new-quest" style="display: none">
+      <h2 class="display-3 mb-4">OK, I gave up...</h2>
+      <form class="ending-form">
+        <label for="newGuess">
+          <h4>You thought of:</h4>
+        </label>
+        <input name="newGuess" class="form-control my-2" type="txt" id="newGuess" placeholder="Your Guess" required />
+
+        <label for="newQuest">
+          <h4>Question to differentiate:</h4>
+        </label>
+        <input name="newQuest" class="form-control my-2" type="txt" id="newQuest"
+          placeholder="The answer is YES for yours" required />
+
+        <button type="submit" class="btn btn-warning btn-add-guess mt-4">Make me Smarter!</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>CoffeRights &copy; 2021</footer>
+
+  <script src="lib/bootstrap/bootstrap.bundel.js"></script>
+  <script src="lib/jquery/jquery.js"></script>
+  <script src="js/service/storage.service.js"></script>
+  <script src="js/service/quest.service.js"></script>
+  <script src="js/quest.controller.js"></script>
+</body>
+
+</html>
